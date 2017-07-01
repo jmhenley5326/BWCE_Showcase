@@ -299,7 +299,7 @@
                 tibex:bw.rest.resource.source="generated" tibex:source="bw.rest.service">
                 <wsdl:documentation>Simple Service that demonstrates the circuit breaker feature in BWCE. Calling the service with the "success" parameter set to true will return the downstream services payload. Calling the service with the "success" parameter set to false will cause the circuit to open and a default message returned</wsdl:documentation>
                 <wsdl:operation name="get">
-                    <wsdl:documentation>Simple Service that demonstrates the circuit breaker feature in BWCE. Calling the service with the \"success\" parameter set to true will return the downstream services payload. Calling the service with the \"success\" parameter set to false will cause the circuit to open and a default message returned</wsdl:documentation>
+                    <wsdl:documentation>Simple Service that demonstrates the circuit breaker feature in BWCE. Calling the service with the \"success\" parameter set to true will return the downstream services payload. Calling the service with the \"success\" parameter set to false over and over will cause the circuit to open and a default message returned</wsdl:documentation>
                     <wsdl:input message="tns:getRequest" name="getInput"/>
                     <wsdl:output message="tns:getResponse" name="getOutput"/>
                     <wsdl:fault message="tns:get4XXFaultMessage" name="clientFault"/>

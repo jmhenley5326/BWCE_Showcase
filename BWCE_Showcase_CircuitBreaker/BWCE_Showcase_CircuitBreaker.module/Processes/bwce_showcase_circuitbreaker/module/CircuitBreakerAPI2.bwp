@@ -245,6 +245,7 @@
                 tibex:bw.rest.resource.source="generated" tibex:source="bw.rest.service">
                 <wsdl:documentation/>
                 <wsdl:operation name="get">
+                    <wsdl:documentation>Simple Service that demonstrates the circuit breaker feature in BWCE. This services will retry the downstream service call 3 times before failing.</wsdl:documentation>
                     <wsdl:input message="tns:getRequest" name="getInput"/>
                     <wsdl:output message="tns:getResponse" name="getOutput"/>
                     <wsdl:fault message="tns:get4XXFaultMessage" name="clientFault"/>
