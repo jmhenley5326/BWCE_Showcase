@@ -11,7 +11,7 @@
   "paths" : {
     "/circuitbreaker" : {
       "get" : {
-        "description" : "Simple Service that demonstrates the circuit breaker feature in BWCE. Calling the service with the \\\"success\\\" parameter set to true will return the downstream services payload. Calling the service with the \\\"success\\\" parameter set to false will cause the circuit to open and a default message returned",
+        "description" : "Simple Service that demonstrates the circuit breaker feature in BWCE. Calling the service with the \\\"success\\\" parameter set to true will return the downstream services payload. Calling the service with the \\\"success\\\" parameter set to false over and over will cause the circuit to open and a default message returned",
         "operationId" : "get-circuitbreaker",
         "consumes" : [ "application/json" ],
         "produces" : [ "application/json", "application/xml" ],

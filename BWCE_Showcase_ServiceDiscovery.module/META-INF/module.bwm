@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_JhKooF5uEeephtMsYB7EeQ" targetNamespace="http://tns.tibco.com/bw/composite/BWCE_Showcase_ServiceDiscovery.module" name="BWCE_Showcase_ServiceDiscovery.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_jzPOQF5uEeephtMsYB7EeQ" name="servicediscovery" promote="ComponentServiceDiscoveryAPI/servicediscovery">
+    <sca:interface.wsdl xmi:id="_jzUt0F5uEeephtMsYB7EeQ" interface="http://xmlns.example.com/20170701100419PLT#wsdl.interface(servicediscovery)" scaext:wsdlLocation="../Processes/bwce_showcase_servicediscovery/module/ServiceDiscoveryAPI.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_jzbbgF5uEeephtMsYB7EeQ" name="RestService" path="/servicediscovery" docBasePath="http://localhost:7777/BWCE_Showcase_ServiceDiscovery.module" docResourcePath="ServiceDiscoveryAPI" basePath="/" connector="bwce_showcase_servicediscovery.module.ServiceDiscoveryAPI" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/bwce_showcase_servicediscovery.module.ServiceDiscoveryAPI-ServiceDiscoveryAPI.json">
+      <operation xmi:id="_jzcCkF5uEeephtMsYB7EeQ" operationName="get" nickname="get-servicediscovery" httpMethod="GET" responseStyle="element" requestStyle="element">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_jzpd8F5uEeephtMsYB7EeQ"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_jzcCkV5uEeephtMsYB7EeQ" bindingName="RestService"/>
+  </sca:service>
+  <sca:service xmi:id="_M8tF8F5vEeephtMsYB7EeQ" name="servicediscovery-consumer" promote="ComponentServiceDiscoveryConsumerAPI/servicediscovery-consumer">
+    <sca:interface.wsdl xmi:id="_M8tF9F5vEeephtMsYB7EeQ" interface="http://xmlns.example.com/20170701100856PLT#wsdl.interface(servicediscovery-consumer)" scaext:wsdlLocation="../Processes/bwce_showcase_servicediscovery/module/ServiceDiscoveryConsumerAPI.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_M8ttAF5vEeephtMsYB7EeQ" name="RestService1" path="/servicediscovery-consumer" docBasePath="http://localhost:7777/BWCE_Showcase_ServiceDiscovery.module" docResourcePath="ServiceDiscoveryConsumerAPI" basePath="/" connector="bwce_showcase_servicediscovery.module.ServiceDiscoveryAPI" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/bwce_showcase_servicediscovery.module.ServiceDiscoveryConsumerAPI-ServiceDiscoveryConsumerAPI.json">
+      <operation xmi:id="_M8uUEF5vEeephtMsYB7EeQ" operationName="get" nickname="get-servicediscovery-consumer" httpMethod="GET" responseStyle="element" requestStyle="element">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_M8u7IF5vEeephtMsYB7EeQ"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_M8uUEV5vEeephtMsYB7EeQ" bindingName="RestService1"/>
+  </sca:service>
+  <sca:property xmi:id="_KArPIF5uEeephtMsYB7EeQ" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_KAx80F5uEeephtMsYB7EeQ" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_KA1nMF5uEeephtMsYB7EeQ" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_KA4DcF5uEeephtMsYB7EeQ" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_KA7t0F5uEeephtMsYB7EeQ" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_KA-xIF5uEeephtMsYB7EeQ" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_KBB0cF5uEeephtMsYB7EeQ" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_jzJusF5uEeephtMsYB7EeQ" name="ComponentServiceDiscoveryAPI" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_jzJusV5uEeephtMsYB7EeQ" processName="bwce_showcase_servicediscovery.module.ServiceDiscoveryAPI"/>
+    <sca:service xmi:id="_jzMK8F5uEeephtMsYB7EeQ" name="servicediscovery">
+      <sca:interface.wsdl xmi:id="_jzMyAF5uEeephtMsYB7EeQ" interface="http://xmlns.example.com/20170701100419PLT#wsdl.interface(servicediscovery)" scaext:wsdlLocation="../Processes/bwce_showcase_servicediscovery/module/ServiceDiscoveryAPI.bwp"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_M8se4F5vEeephtMsYB7EeQ" name="ComponentServiceDiscoveryConsumerAPI" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_M8se4V5vEeephtMsYB7EeQ" processName="bwce_showcase_servicediscovery.module.ServiceDiscoveryConsumerAPI"/>
+    <sca:service xmi:id="_M8se4l5vEeephtMsYB7EeQ" name="servicediscovery-consumer">
+      <sca:interface.wsdl xmi:id="_M8se415vEeephtMsYB7EeQ" interface="http://xmlns.example.com/20170701100856PLT#wsdl.interface(servicediscovery-consumer)" scaext:wsdlLocation="../Processes/bwce_showcase_servicediscovery/module/ServiceDiscoveryConsumerAPI.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

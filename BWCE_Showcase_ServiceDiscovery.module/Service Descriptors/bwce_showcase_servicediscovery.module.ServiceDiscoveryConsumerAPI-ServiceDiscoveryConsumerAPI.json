@@ -1,0 +1,47 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "Invokes the ServiceDiscoveryAPI",
+    "description" : "Invokes the ServiceDiscoveryAPI"
+  },
+  "host" : "localhost:8765",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/servicediscovery-consumer" : {
+      "get" : {
+        "description" : "This service discovers and invokes the ServiceDiscoveryAPI",
+        "operationId" : "get-servicediscovery-consumer",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "a ServiceDiscoveryAPI to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/ServiceDiscoveryAPI"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "ServiceDiscoveryAPI" : {
+      "type" : "object",
+      "required" : [ "name" ],
+      "properties" : {
+        "name" : {
+          "type" : "string"
+        },
+        "number" : {
+          "type" : "integer"
+        },
+        "flag" : {
+          "type" : "boolean"
+        }
+      }
+    }
+  }
+}

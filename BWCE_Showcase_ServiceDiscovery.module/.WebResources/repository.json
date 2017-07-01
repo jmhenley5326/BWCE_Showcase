@@ -1,0 +1,13 @@
+{
+    "records": [],
+    "resources": [
+        {
+            "location": "Service Descriptors/bwce_showcase_servicediscovery.module.ServiceDiscoveryAPI-ServiceDiscoveryAPI.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/bwce_showcase_servicediscovery.module.ServiceDiscoveryConsumerAPI-ServiceDiscoveryConsumerAPI.json",
+            "type": "generated"
+        }
+    ]
+}

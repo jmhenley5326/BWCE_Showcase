@@ -1,0 +1,12 @@
+{"records": [
+    {
+        "jsonSchemaLocation": "/BWCE_Showcase_ServiceDiscovery.module/Service Descriptors/bwce_showcase_servicediscovery.module.ServiceDiscoveryAPI-ServiceDiscoveryAPI.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.example.com/namespaces/tns/1498921402327"
+    },
+    {
+        "jsonSchemaLocation": "/BWCE_Showcase_ServiceDiscovery.module/Service Descriptors/bwce_showcase_servicediscovery.module.ServiceDiscoveryConsumerAPI-ServiceDiscoveryConsumerAPI.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.example.com/namespaces/tns/1498921402327"
+    }
+]}
