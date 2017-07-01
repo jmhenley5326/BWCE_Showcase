@@ -1,0 +1,60 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "",
+    "description" : ""
+  },
+  "host" : "localhost:8675",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/circuitbreaker2" : {
+      "get" : {
+        "description" : "",
+        "operationId" : "get-circuitbreaker2",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json", "application/xml" ],
+        "parameters" : [ {
+          "name" : "success",
+          "in" : "query",
+          "description" : "",
+          "type" : "boolean",
+          "required" : false
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a CircuitBreakerSvcResponseElement to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/CircuitBreakerSvcResponseElement"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "downstream" : {
+      "type" : "object",
+      "properties" : {
+        "message" : {
+          "type" : "string"
+        },
+        "resultCode" : {
+          "type" : "integer"
+        }
+      }
+    },
+    "CircuitBreakerSvcResponseElement" : {
+      "type" : "object",
+      "properties" : {
+        "message" : {
+          "type" : "string"
+        },
+        "downstream" : {
+          "$ref" : "#/definitions/downstream"
+        }
+      }
+    }
+  }
+}

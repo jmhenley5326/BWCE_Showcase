@@ -1,7 +1,17 @@
 {
-    "records": [],
-    "resources": [{
-        "location": "Service Descriptors/bwce_showcase_circuitbreaker.module.CircuitBreakerAPI-CircuitBreaker.json",
-        "type": "generated"
-    }]
+    "records": [{
+        "name": "Cloud",
+        "items": [],
+        "url": "https://qa-integration.cloud.tibco.com:443"
+    }],
+    "resources": [
+        {
+            "location": "Service Descriptors/bwce_showcase_circuitbreaker.module.CircuitBreakerAPI-CircuitBreaker.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/bwce_showcase_circuitbreaker.module.CircuitBreakerAPI2-CircuitBreaker2.json",
+            "type": "generated"
+        }
+    ]
 }

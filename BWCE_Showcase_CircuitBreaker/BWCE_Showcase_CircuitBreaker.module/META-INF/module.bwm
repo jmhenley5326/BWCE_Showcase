@@ -14,6 +14,21 @@
     </scaext:binding>
     <scact:bindingAdjunct xmi:id="_lVcvgV3MEeewcP2a2k2kRA" bindingName="RestService"/>
   </sca:service>
+  <sca:service xmi:id="_s2634F4DEeeHyca0e2ftxQ" name="circuitbreaker2" promote="ComponentCircuitBreakerAPI2/circuitbreaker2">
+    <sca:interface.wsdl xmi:id="_s3AXcF4DEeeHyca0e2ftxQ" interface="http://xmlns.example.com/20170630211924PLT#wsdl.interface(circuitbreaker2)" scaext:wsdlLocation="../Processes/bwce_showcase_circuitbreaker/module/CircuitBreakerAPI2.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_s3CzsF4DEeeHyca0e2ftxQ" name="RestService1" path="/circuitbreaker2" docBasePath="http://localhost:7777/BWCE_Showcase_CircuitBreaker.module" docResourcePath="CircuitBreaker2" basePath="/" connector="bwce_showcase_circuitbreaker.module.CircuitBreaker" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/bwce_showcase_circuitbreaker.module.CircuitBreakerAPI2-CircuitBreaker2.json">
+      <operation xmi:id="_s3CzsV4DEeeHyca0e2ftxQ" operationName="get" nickname="get-circuitbreaker2" httpMethod="GET" responseStyle="element" requestStyle="element">
+        <parameters xmi:id="_p3HpcF4EEeeHyca0e2ftxQ">
+          <parameterMapping xmi:id="_p3IQgF4EEeeHyca0e2ftxQ" parameterName="success" parameterType="Query" dataType="boolean"/>
+        </parameters>
+        <clientFormat>json</clientFormat>
+        <clientFormat>xml</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_s3HFIF4DEeeHyca0e2ftxQ"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_s3DawF4DEeeHyca0e2ftxQ" bindingName="RestService1"/>
+  </sca:service>
   <sca:property xmi:id="_Ditj4F3DEeewcP2a2k2kRA" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_DiwnMF3DEeewcP2a2k2kRA" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_DiycYF3DEeewcP2a2k2kRA" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
@@ -25,6 +40,12 @@
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_lVGxQV3MEeewcP2a2k2kRA" processName="bwce_showcase_circuitbreaker.module.CircuitBreakerAPI"/>
     <sca:service xmi:id="_lVLCsF3MEeewcP2a2k2kRA" name="circuitbreaker">
       <sca:interface.wsdl xmi:id="_lVM34F3MEeewcP2a2k2kRA" interface="http://xmlns.example.com/20170630154451PLT#wsdl.interface(circuitbreakersuccess)" scaext:wsdlLocation="../Processes/bwce_showcase_circuitbreaker/module/CircuitBreakerAPI.bwp"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_s20KMF4DEeeHyca0e2ftxQ" name="ComponentCircuitBreakerAPI2" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_s20KMV4DEeeHyca0e2ftxQ" processName="bwce_showcase_circuitbreaker.module.CircuitBreakerAPI2"/>
+    <sca:service xmi:id="_s230kF4DEeeHyca0e2ftxQ" name="circuitbreaker2">
+      <sca:interface.wsdl xmi:id="_s24boF4DEeeHyca0e2ftxQ" interface="http://xmlns.example.com/20170630211924PLT#wsdl.interface(circuitbreaker2)" scaext:wsdlLocation="../Processes/bwce_showcase_circuitbreaker/module/CircuitBreakerAPI2.bwp"/>
     </sca:service>
   </sca:component>
 </sca:composite>

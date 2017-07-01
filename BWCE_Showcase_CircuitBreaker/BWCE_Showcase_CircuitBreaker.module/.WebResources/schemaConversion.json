@@ -8,5 +8,10 @@
         "jsonSchemaLocation": "/BWCE_Showcase_CircuitBreaker.module/Service Descriptors/BWCE_Showcase_SimpleSvc.json",
         "conversionType": "generated",
         "xsdSchemaTargetNamespace": "/T1498852769573Converted/JsonSchema"
+    },
+    {
+        "jsonSchemaLocation": "/BWCE_Showcase_CircuitBreaker.module/Service Descriptors/bwce_showcase_circuitbreaker.module.CircuitBreakerAPI2-CircuitBreaker2.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://tns.tibco.com/bw/json/1498851681354"
     }
 ]}
