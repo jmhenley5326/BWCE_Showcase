@@ -1,0 +1,55 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "BWCE_Showcase_SimpleSvc",
+    "x-lastModified": "Jun 30, 2017 12:54PM PST"
+  },
+  "paths": {
+    "/oceyc5rueq73wpjcxjvqymt54s5y5c2g/simple": {
+      "get": {
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response",
+            "schema": {
+              "$ref": "#/definitions/SimpleSvcResponse"
+            }
+          },
+          "500": {
+            "description": "Service Error",
+            "schema": {
+              "$ref": "#/definitions/SimpleSvcResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "success",
+            "in": "query",
+            "description": "Tells the service whether to return an error or not",
+            "required": false,
+            "type": "boolean",
+            "format": ""
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "SimpleSvcResponse": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "string"
+        },
+        "resultCode": {
+          "type": "integer"
+        }
+      }
+    }
+  }
+}

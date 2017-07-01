@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_DYzZ8F3DEeewcP2a2k2kRA" targetNamespace="http://tns.tibco.com/bw/composite/BWCE_Showcase_CircuitBreaker.module" name="BWCE_Showcase_CircuitBreaker.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_lVP7MF3MEeewcP2a2k2kRA" name="circuitbreaker" promote="ComponentCircuitBreakerAPI/circuitbreaker">
+    <sca:interface.wsdl xmi:id="_lVX3AF3MEeewcP2a2k2kRA" interface="http://xmlns.example.com/20170630154451PLT#wsdl.interface(circuitbreakersuccess)" scaext:wsdlLocation="../Processes/bwce_showcase_circuitbreaker/module/CircuitBreakerAPI.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_lVbhYF3MEeewcP2a2k2kRA" name="RestService" path="/circuitbreaker" docBasePath="http://localhost:7777/BWCE_Showcase_CircuitBreaker.module" docResourcePath="CircuitBreaker" basePath="/" connector="bwce_showcase_circuitbreaker.module.CircuitBreaker" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/bwce_showcase_circuitbreaker.module.CircuitBreakerAPI-CircuitBreaker.json">
+      <operation xmi:id="_lVcvgF3MEeewcP2a2k2kRA" operationName="get" nickname="get-circuitbreaker" httpMethod="GET" responseStyle="element" requestStyle="element">
+        <parameters xmi:id="_FaYroF3NEeewcP2a2k2kRA">
+          <parameterMapping xmi:id="_FaYroV3NEeewcP2a2k2kRA" parameterName="success" parameterType="Query" dataType="boolean"/>
+        </parameters>
+        <clientFormat>json</clientFormat>
+        <clientFormat>xml</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_lVcvgV3MEeewcP2a2k2kRA" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_Ditj4F3DEeewcP2a2k2kRA" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_DiwnMF3DEeewcP2a2k2kRA" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_DiycYF3DEeewcP2a2k2kRA" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_DizDcF3DEeewcP2a2k2kRA" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Di0RkF3DEeewcP2a2k2kRA" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Di2GwF3DEeewcP2a2k2kRA" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_Di378F3DEeewcP2a2k2kRA" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_lVGxQF3MEeewcP2a2k2kRA" name="ComponentCircuitBreakerAPI" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_lVGxQV3MEeewcP2a2k2kRA" processName="bwce_showcase_circuitbreaker.module.CircuitBreakerAPI"/>
+    <sca:service xmi:id="_lVLCsF3MEeewcP2a2k2kRA" name="circuitbreaker">
+      <sca:interface.wsdl xmi:id="_lVM34F3MEeewcP2a2k2kRA" interface="http://xmlns.example.com/20170630154451PLT#wsdl.interface(circuitbreakersuccess)" scaext:wsdlLocation="../Processes/bwce_showcase_circuitbreaker/module/CircuitBreakerAPI.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

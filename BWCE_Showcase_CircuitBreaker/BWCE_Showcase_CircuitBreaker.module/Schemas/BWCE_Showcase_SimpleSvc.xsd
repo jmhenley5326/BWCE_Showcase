@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" targetNamespace="/T1498852769573Converted/JsonSchema" xmlns:tns="/T1498852769573Converted/JsonSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="SimpleSvcResponse" type="tns:SimpleSvcResponse"/>
+    <xs:complexType name="SimpleSvcResponse">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="resultCode" type="xs:integer"/>
+            <xs:element minOccurs="0" name="message" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

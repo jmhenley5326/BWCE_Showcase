@@ -1,0 +1,7 @@
+{
+    "records": [],
+    "resources": [{
+        "location": "Service Descriptors/bwce_showcase_circuitbreaker.module.CircuitBreakerAPI-CircuitBreaker.json",
+        "type": "generated"
+    }]
+}
