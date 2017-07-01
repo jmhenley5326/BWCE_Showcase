@@ -2,5 +2,5 @@
 Showcase of BWCE Features with Examples
 
 ## Circuit Breaker
-### BWCE_CircuitBreaker
+### BWCE_Showcase_CircuitBreaker
 Examples of using the Circuit Breaker feature
