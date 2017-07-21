@@ -4,6 +4,15 @@ Showcase of BWCE Features with Examples
 ## Circuit Breaker
 ### BWCE_Showcase_CircuitBreaker
 Project containing examples using the Circuit Breaker feature
+- Hystrix: A Hystrix Server is required to view the Circuit Breaker Status
+  - A simple Hystrix Server can be started using Docker
+  - <i>git clone https://github.com/mlabouardy/hystrix-dashboard-docker.git hystrix-dashboard-docker</i>
+  - <i>docker build -t hystrix/dashboard .</i>
+  - <i>docker run -d -p 9002:9002 --name hystrix-dashboard hystrix/dashboard:latest</i>
+  - Once running navigate to http://localhost:9002/hystrix
+  - Enter the following: http://\<routable url\>:8090/hystrix.stream
+    - The routable url must be accessible from within the Docker container. If you are running the service locally, use your machine's local IP address
+
 - CircuitBreakerAPI: Rest API which invokes a downstream service. Accepts a query parameter (success:boolean) that triggers the downstream service to return either successfully (200) or unsuccessfully (500). Invoking this API multiple times with success=false will cause the Circuit to Open. This demonstrates the ability to distinguish between a downstream service failure and a Circuit being open.
 
 - CircuitBreakerAPI2: Similiar in most respects to the above API, this service demonstrates a more typical approach of retrying a service call several times (ex: 3) before failing. Instead of returning an error to the consumer this service calls alternate paths depending on whether the service has failed or the Circuit is Open.
