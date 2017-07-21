@@ -307,7 +307,7 @@
                 </wsdl:operation>
             </wsdl:portType>
             <wsdl:portType name="simple"
-                tibex:bw.rest.apipath="/oceyc5rueq73wpjcxjvqymt54s5y5c2g/simple"
+                tibex:bw.rest.apipath="/mmjxaxbauebtpnwouav7ceth6ykir32f/simple"
                 tibex:bw.rest.resource="Service Descriptors/BWCE_Showcase_SimpleSvc.json"
                 tibex:bw.rest.resource.source="external" tibex:source="bw.rest.reference">
                 <wsdl:documentation>summary documentation</wsdl:documentation>
@@ -1541,7 +1541,7 @@
                                 docResourcePath="Simple"
                                 implementation="Service Descriptors/BWCE_Showcase_SimpleSvc.json"
                                 name="RestReference"
-                                path="/oceyc5rueq73wpjcxjvqymt54s5y5c2g/simple"
+                                path="/mmjxaxbauebtpnwouav7ceth6ykir32f/simple"
                                 structuredData="true"
                                 technologyVersion="2.0" xsi:type="rest:RestReferenceBinding">
                                 <operation httpMethod="GET"
